@@ -1,0 +1,7 @@
+操作系统默认yum源里没有支持NTFS的软件包，需要在网上使用第三方的yum源
+输入网址， repoforge.org，   点usage，   下载EL 7    
+去安装：进入相应目录， rpm -ivh filename     （安装好系统上就有了repoforge的yum源）
+查找一下所有名字中包含 ntfs 的软件包：  yun list | grep ntfs    (因为会从网上抓取yum仓库的信息，第一次会比较慢)
+yum install -y fuse-ntfs-3g.i686 (i686改成相应版本)
+安装好了之后，会发现mount的快捷命令里面多了 mount.ntfs 和 mount.ntfs-3g 
+使用 mount.ntfs /dev/sd* /mnt
