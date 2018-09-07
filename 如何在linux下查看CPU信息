@@ -1,0 +1,4 @@
+    有两种方式可以查看CPU信息：
+1 第一个是proc目录，里面有一个cpuinfo文件，里面保存计算机中当前处理器的信息，可用cat命令查看（processor:内核编号， vendor_id厂商类型，  
+  cpu family:cpu本身的一个编号，stepping:cpu的步进值, cpu MHz:cpu实际的工作频率， cache size:cpu的二节缓存大小， flags:cpu所支持
+  的一些指令集， address sizes：cpu物理总限的长度,39位的物理总限，48位的虚拟总限，用来决定处理器能够访问多大的内存空间。 另一个命令：lscpu
