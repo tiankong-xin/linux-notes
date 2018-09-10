@@ -1,0 +1,9 @@
+1 查看某一个文件夹的磁盘使用率： du -sh /etc      显示的是文件夹的大小
+2 agedu: (使用需要root）
+    登陆：idex of /pub/epel/6/i386    （根据版本修改）
+    下载epel-release-6-7.noarch.rpm     （根据版本修改）
+    安装，安装好后在/etc/yum.repos.d/会多出一个叫epel.repo的yum源的配置
+    yum install -y agedu      (第一次可能比较慢)
+  使用： agedu -s 目录          （分析目录及其子目录用了多大磁盘空间，比如根分区），会创建一个agedu.dat索引文件
+        agedu -w    复制连接，用浏览器打开
+        筛选： agedu -s / --exclude "*" __include "*.conf"
